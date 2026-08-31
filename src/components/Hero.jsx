@@ -4,7 +4,7 @@ import { ACADEMY_INFO } from '../data/academyData';
 
 export default function Hero({ onOpenEnroll }) {
   return (
-    <section className="relative overflow-hidden bg-math-pattern text-slate-900 py-8 sm:py-16 border-b border-amber-900/10">
+    <section className="relative overflow-hidden bg-hero-education text-slate-900 py-8 sm:py-16 border-b border-amber-900/10">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-12 gap-8 items-center">
@@ -26,8 +26,8 @@ export default function Hero({ onOpenEnroll }) {
               </span>
             </h1>
 
-            <p className="text-slate-700 text-xs sm:text-base max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
-              Top-rated tuition academy in Karur for <strong className="text-[#0F2038]">Grade 10 & 12</strong> (CBSE, ICSE, Matric), <strong className="text-[#5C2418]">Engineering Maths (M1–M4)</strong> with 25% discount, and <strong className="text-emerald-700">NEET Crash Course</strong>. Available in both <span className="underline font-bold text-[#0F2038]">Offline</span> & <span className="underline font-bold text-[#0F2038]">Online</span> batches.
+            <p className="text-slate-800 text-xs sm:text-base max-w-2xl mx-auto lg:mx-0 font-semibold leading-relaxed">
+              Top-rated tuition academy in Karur for <strong className="text-[#0F2038]">Grade 10 & 12</strong> (CBSE, ICSE, Matric), <strong className="text-[#5C2418]">Engineering Maths (M1–M4)</strong> with 25% discount, and <strong className="text-emerald-800 font-extrabold">NEET Crash Course</strong>. Available in both <span className="underline font-bold text-[#0F2038]">Offline</span> & <span className="underline font-bold text-[#0F2038]">Online</span> batches.
             </p>
 
             {/* White Trust Pills */}
@@ -67,7 +67,7 @@ export default function Hero({ onOpenEnroll }) {
               </a>
             </div>
 
-            <div className="text-[11px] sm:text-xs text-slate-600 pt-1 flex items-center justify-center lg:justify-start gap-1.5 font-medium">
+            <div className="text-[11px] sm:text-xs text-slate-700 pt-1 flex items-center justify-center lg:justify-start gap-1.5 font-semibold">
               <Phone className="w-3 h-3 text-[#3E1A14]" />
               <span>Hotline: <a href={`tel:${ACADEMY_INFO.phone}`} className="text-[#3E1A14] font-extrabold hover:underline">{ACADEMY_INFO.phone}</a></span>
             </div>
@@ -76,7 +76,7 @@ export default function Hero({ onOpenEnroll }) {
 
           {/* Right Logo Card */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="bg-white border-2 border-amber-900/15 rounded-3xl p-5 sm:p-8 shadow-xl text-center max-w-xs sm:max-w-sm w-full">
+            <div className="bg-white/95 backdrop-blur-sm border-2 border-amber-900/15 rounded-3xl p-5 sm:p-8 shadow-xl text-center max-w-xs sm:max-w-sm w-full">
               
               <img 
                 src="/22.jpg" 
@@ -92,7 +92,7 @@ export default function Hero({ onOpenEnroll }) {
                 RK ACADEMY
               </h2>
               <p className="text-[#5C2418] font-extrabold text-[10px] sm:text-xs tracking-wider uppercase">KARUR</p>
-              <p className="text-[11px] text-slate-500 mt-0.5 italic font-medium">"Your Dreams Come True"</p>
+              <p className="text-[11px] text-slate-600 mt-0.5 italic font-semibold">"Your Dreams Come True"</p>
 
               {/* Special Offer Highlight Box */}
               <div className="mt-3 bg-[#3E1A14] border border-[#2A110D] rounded-xl p-3 text-center text-white shadow-md">
