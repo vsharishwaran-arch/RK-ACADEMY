@@ -30,7 +30,7 @@ export default function ResultsAndToppers() {
   ];
 
   return (
-    <section id="toppers" className="py-16 bg-[#FFF8F5] text-slate-900 border-b border-slate-200">
+    <section id="toppers" className="py-16 bg-[#FAF4F0] text-slate-900 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -45,7 +45,7 @@ export default function ResultsAndToppers() {
           <p className="text-slate-600 text-base mt-2 font-normal">
             Celebrating our students who achieved distinction marks in board and university exams.
           </p>
-          <div className="w-16 h-1 bg-[#D85628] mx-auto mt-4 rounded-full"></div>
+          <div className="w-16 h-1 bg-[#5C2C1D] mx-auto mt-4 rounded-full"></div>
         </div>
 
         {/* Stats Strip */}
@@ -59,7 +59,7 @@ export default function ResultsAndToppers() {
             <div className="text-xs font-medium text-slate-600 mt-1">Pass & Distinction Rate</div>
           </div>
           <div className="bg-white border border-slate-200 p-5 rounded-xl text-center shadow-sm">
-            <div className="font-display font-bold text-3xl text-[#D85628]">100/100</div>
+            <div className="font-display font-bold text-3xl text-[#5C2C1D]">100/100</div>
             <div className="text-xs font-medium text-slate-600 mt-1">Perfect Centums in Maths</div>
           </div>
           <div className="bg-white border border-slate-200 p-5 rounded-xl text-center shadow-sm">
@@ -73,7 +73,7 @@ export default function ResultsAndToppers() {
           {toppers.map((t, idx) => (
             <div 
               key={idx}
-              className="bg-white border border-slate-200 hover:border-[#D85628] rounded-2xl p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between"
+              className="bg-white border border-slate-200 hover:border-[#5C2C1D] rounded-2xl p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-4">

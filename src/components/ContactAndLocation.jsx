@@ -4,7 +4,7 @@ import { ACADEMY_INFO } from '../data/academyData';
 
 export default function ContactAndLocation({ onOpenEnroll }) {
   return (
-    <section id="contact" className="py-16 bg-[#FFF8F5] text-slate-900 border-b border-slate-200">
+    <section id="contact" className="py-16 bg-[#FAF4F0] text-slate-900 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -19,7 +19,7 @@ export default function ContactAndLocation({ onOpenEnroll }) {
           <p className="text-slate-600 text-base mt-2 font-normal">
             Walk into our Karur center or connect directly on WhatsApp / Phone.
           </p>
-          <div className="w-16 h-1 bg-[#D85628] mx-auto mt-4 rounded-full"></div>
+          <div className="w-16 h-1 bg-[#5C2C1D] mx-auto mt-4 rounded-full"></div>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-8 items-start">
@@ -40,7 +40,7 @@ export default function ContactAndLocation({ onOpenEnroll }) {
                     href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ACADEMY_INFO.mapQuery)}`} 
                     target="_blank" 
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs text-slate-800 hover:text-[#D85628] font-semibold mt-2 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200"
+                    className="inline-flex items-center gap-1.5 text-xs text-slate-800 hover:text-[#5C2C1D] font-semibold mt-2 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200"
                   >
                     <Navigation className="w-3.5 h-3.5" />
                     <span>Get Directions on Google Maps →</span>
@@ -54,7 +54,7 @@ export default function ContactAndLocation({ onOpenEnroll }) {
                 </div>
                 <div>
                   <h4 className="font-display font-bold text-slate-900 text-sm">Admissions Hotline</h4>
-                  <a href={`tel:${ACADEMY_INFO.phone}`} className="text-slate-900 font-display font-bold text-2xl hover:text-[#D85628] transition block">
+                  <a href={`tel:${ACADEMY_INFO.phone}`} className="text-slate-900 font-display font-bold text-2xl hover:text-[#5C2C1D] transition block">
                     {ACADEMY_INFO.phone}
                   </a>
                   <p className="text-xs text-slate-500">Mon – Sat (9:00 AM – 9:00 PM)</p>
@@ -94,7 +94,7 @@ export default function ContactAndLocation({ onOpenEnroll }) {
 
                 <button
                   onClick={onOpenEnroll}
-                  className="flex-1 bg-[#D85628] hover:bg-[#C2471B] text-white font-bold text-sm py-3.5 rounded-xl shadow-md transition"
+                  className="flex-1 bg-[#5C2C1D] hover:bg-[#4A2216] text-white font-bold text-sm py-3.5 rounded-xl shadow-md transition"
                 >
                   Request Callback
                 </button>

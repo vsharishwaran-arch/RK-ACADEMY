@@ -5,7 +5,7 @@
 @layer base {
   body {
     overflow-x: hidden;
-    background-color: #FFF8F5;
+    background-color: #FAF4F0;
     color: #172021;
   }
 }
@@ -25,7 +25,7 @@
   animation: float 4s ease-in-out infinite;
 }
 
-.animate-pulse-glow {
+.animate-[#FAF4F0] {
   animation: pulseGlow 3s ease-in-out infinite;
 }
 
@@ -34,12 +34,12 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FFDBCE;
+  background: #E8D8CF;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D85628;
+  background: #5C2C1D;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #742512;
+  background: #381A12;
 }

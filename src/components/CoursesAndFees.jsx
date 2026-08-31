@@ -13,7 +13,7 @@ export default function CoursesAndFees({ onOpenEnroll }) {
   const enggFinal = enggSubtotal - enggDiscount;
 
   return (
-    <section id="courses-fees" className="py-16 bg-[#FAF0E2]/60 text-slate-900 border-b border-slate-200">
+    <section id="courses-fees" className="py-16 bg-[#FAF4F0]/60 text-slate-900 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -28,20 +28,20 @@ export default function CoursesAndFees({ onOpenEnroll }) {
           <p className="text-slate-600 text-base mt-2 font-normal">
             Transparent pricing with special discounts for engineering & school students.
           </p>
-          <div className="w-16 h-1 bg-[#D85628] mx-auto mt-4 rounded-full"></div>
+          <div className="w-16 h-1 bg-[#5C2C1D] mx-auto mt-4 rounded-full"></div>
         </div>
 
         {/* 1. COURSES GRID */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           
           {/* Engineering Maths Card */}
-          <div className="bg-white border-2 border-[#D85628] rounded-2xl p-6 shadow-md hover:shadow-lg transition flex flex-col justify-between relative overflow-hidden">
-            <span className="bg-[#D85628] text-white font-bold text-[11px] uppercase px-3 py-1 rounded-full w-fit mb-3">
+          <div className="bg-white border-2 border-[#5C2C1D] rounded-2xl p-6 shadow-md hover:shadow-lg transition flex flex-col justify-between relative overflow-hidden">
+            <span className="bg-[#5C2C1D] text-white font-bold text-[11px] uppercase px-3 py-1 rounded-full w-fit mb-3">
               25% DISCOUNT OFFER
             </span>
             <div>
-              <div className="p-3 bg-orange-50 rounded-xl w-fit mb-3 border border-orange-100">
-                <Calculator className="w-6 h-6 text-[#D85628]" />
+              <div className="p-3 bg-[#E8D8CF]/50 rounded-xl w-fit mb-3 border border-[#5C2C1D]/20">
+                <Calculator className="w-6 h-6 text-[#5C2C1D]" />
               </div>
               <h3 className="font-display font-bold text-xl text-slate-900 mb-2">
                 Engineering Maths (M1–M4)
@@ -58,7 +58,7 @@ export default function CoursesAndFees({ onOpenEnroll }) {
             <div className="border-t border-slate-100 pt-4">
               <div className="text-xs text-slate-500 font-medium">Fee Starting From:</div>
               <div className="flex items-baseline gap-2">
-                <span className="font-display font-bold text-2xl text-[#D85628]">₹1,125 / paper</span>
+                <span className="font-display font-bold text-2xl text-[#5C2C1D]">₹1,125 / paper</span>
                 <span className="text-xs text-slate-400 line-through">₹1,500</span>
               </div>
             </div>
@@ -152,7 +152,7 @@ export default function CoursesAndFees({ onOpenEnroll }) {
         <div className="bg-white border border-slate-300 rounded-2xl p-6 sm:p-10 shadow-lg max-w-4xl mx-auto">
           
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-[#D85628] text-white rounded-xl shadow-sm">
+            <div className="p-3 bg-[#5C2C1D] text-white rounded-xl shadow-sm">
               <Percent className="w-6 h-6" />
             </div>
             <div>
@@ -179,7 +179,7 @@ export default function CoursesAndFees({ onOpenEnroll }) {
                       onClick={() => setSelectedEnggPapers(num)}
                       className={`py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm border transition min-h-[44px] flex items-center justify-center ${
                         selectedEnggPapers === num
-                          ? 'bg-[#D85628] text-white border-[#D85628] shadow-sm'
+                          ? 'bg-[#5C2C1D] text-white border-[#5C2C1D] shadow-sm'
                           : 'bg-white border-slate-300 text-slate-700 hover:bg-slate-50'
                       }`}
                     >
@@ -219,20 +219,20 @@ export default function CoursesAndFees({ onOpenEnroll }) {
             </div>
 
             {/* Discount Result Box */}
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 sm:p-6 text-center space-y-3 shadow-sm">
+            <div className="bg-[#FAF4F0] border border-[#5C2C1D]/20 rounded-xl p-5 sm:p-6 text-center space-y-3 shadow-sm">
               <div className="text-xs sm:text-sm text-slate-500 font-medium">Standard Price: <span className="line-through">₹{enggSubtotal}</span></div>
               <div className="text-xs sm:text-sm text-slate-900 font-bold bg-white border border-slate-300 py-1.5 px-3 rounded-full inline-block">
                 ✓ 25% Discount Saved: -₹{enggDiscount}
               </div>
               <div>
                 <span className="text-xs sm:text-sm text-slate-500 font-bold uppercase block">Final Total Payable:</span>
-                <span className="font-display font-bold text-2xl sm:text-3xl text-slate-900">₹{enggFinal}</span>
+                <span className="font-display font-bold text-2xl sm:text-3xl text-[#381A12]">₹{enggFinal}</span>
               </div>
               <a
                 href={`https://wa.me/${ACADEMY_INFO.whatsappNumber}?text=Hi%20RK%20Academy,%20I%20want%20to%20enroll%20for%20${selectedEnggPapers}%20Engineering%20Maths%20paper(s)%20with%2025%25%20Discount.%20Total:%20₹${enggFinal}.`}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full min-h-[48px] bg-slate-900 hover:bg-black text-white font-bold text-xs sm:text-sm py-3 rounded-xl shadow-md flex items-center justify-center gap-2 transition"
+                className="w-full min-h-[48px] bg-[#5C2C1D] hover:bg-[#4A2216] text-white font-bold text-xs sm:text-sm py-3 rounded-xl shadow-md flex items-center justify-center gap-2 transition"
               >
                 <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>Claim Offer on WhatsApp</span>

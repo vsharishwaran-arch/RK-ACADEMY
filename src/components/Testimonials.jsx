@@ -36,7 +36,7 @@ const TESTIMONIALS = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-14 sm:py-20 bg-[#FFF8F5] border-b border-slate-200">
+    <section id="testimonials" className="py-14 sm:py-20 bg-[#FAF4F0] border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
@@ -59,7 +59,7 @@ export default function Testimonials() {
           {TESTIMONIALS.map((item) => (
             <div
               key={item.id}
-              className="bg-white border border-slate-200 hover:border-[#D85628] rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between"
+              className="bg-white border border-slate-200 hover:border-[#5C2C1D] rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Header Badge & Rating */}
@@ -106,9 +106,9 @@ export default function Testimonials() {
         </div>
 
         {/* Video Feedback Callout Box */}
-        <div className="bg-[#742512] rounded-2xl p-6 sm:p-10 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-[#381A12] rounded-2xl p-6 sm:p-10 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 text-amber-200 text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 text-[#E8D8CF] text-xs font-semibold uppercase tracking-wider">
               <Users className="w-4 h-4" />
               <span>Interactive Learning Experience</span>
             </div>
@@ -124,7 +124,7 @@ export default function Testimonials() {
             href="https://wa.me/919790570707?text=Hi%20RK%20Academy,%20I%20would%20like%20to%20attend%20a%20Free%20Demo%20Class."
             target="_blank"
             rel="noreferrer"
-            className="w-full sm:w-auto min-h-[48px] bg-[#D85628] hover:bg-[#C2471B] text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md transition flex items-center justify-center gap-2 flex-shrink-0"
+            className="w-full sm:w-auto min-h-[48px] bg-[#5C2C1D] hover:bg-[#4A2216] text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md transition flex items-center justify-center gap-2 flex-shrink-0"
           >
             <Play className="w-4 h-4 fill-current text-white" />
             <span>Book Free Demo Class</span>

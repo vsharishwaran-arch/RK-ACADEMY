@@ -6,8 +6,8 @@ export default function Hero({ onOpenEnroll }) {
   return (
     <section className="relative overflow-hidden bg-cover bg-center bg-no-repeat py-10 sm:py-16 lg:py-20 border-b border-slate-200" style={{ backgroundImage: "url('/hero_bg.png')" }}>
       
-      {/* Background Soft Warm Overlay */}
-      <div className="absolute inset-0 bg-[#FAF0E2]/90 backdrop-blur-[2px] pointer-events-none"></div>
+      {/* Background Soft Warm Chocolate Overlay */}
+      <div className="absolute inset-0 bg-[#FAF4F0]/90 backdrop-blur-[2px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -23,7 +23,7 @@ export default function Hero({ onOpenEnroll }) {
             {/* Main Title */}
             <h1 className="font-display font-black text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-tight text-slate-900">
               RK ACADEMY KARUR <br />
-              <span className="text-[#D85628] font-bold text-2xl sm:text-4xl lg:text-5xl">
+              <span className="text-[#5C2C1D] font-bold text-2xl sm:text-4xl lg:text-5xl">
                 Your Dreams Come True.
               </span>
             </h1>
@@ -52,7 +52,7 @@ export default function Hero({ onOpenEnroll }) {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2">
               <a
                 href="#courses-fees"
-                className="w-full sm:w-auto min-h-[48px] bg-[#D85628] hover:bg-[#C2471B] text-white font-display font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl shadow-md transition flex items-center justify-center gap-2"
+                className="w-full sm:w-auto min-h-[48px] bg-[#5C2C1D] hover:bg-[#4A2216] text-white font-display font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl shadow-md transition flex items-center justify-center gap-2"
               >
                 <span>Explore Courses & Fees</span>
                 <ArrowRight className="w-5 h-5" />
@@ -110,8 +110,8 @@ export default function Hero({ onOpenEnroll }) {
               <p className="text-xs text-slate-500 mt-1 italic">"Your Dreams Come True"</p>
 
               {/* Offer Highlight Box */}
-              <div className="mt-4 bg-[#742512] text-white rounded-xl p-4 text-center shadow-md">
-                <div className="text-[11px] text-amber-200 font-bold uppercase tracking-wider">SPECIAL OFFER</div>
+              <div className="mt-4 bg-[#381A12] text-white rounded-xl p-4 text-center shadow-md">
+                <div className="text-[11px] text-[#E8D8CF] font-bold uppercase tracking-wider">SPECIAL OFFER</div>
                 <div className="text-2xl font-bold font-display my-0.5 text-white">25% OFF</div>
                 <div className="text-xs text-slate-200">Engineering Maths (M1, M2, M3 & M4)</div>
               </div>

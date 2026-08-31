@@ -36,7 +36,7 @@ export default function WhyUs() {
   ];
 
   return (
-    <section id="why-us" className="py-20 bg-[#FFF8F5] text-slate-900 border-b border-slate-200">
+    <section id="why-us" className="py-20 bg-[#FAF4F0] text-slate-900 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -50,7 +50,7 @@ export default function WhyUs() {
           <p className="text-slate-600 text-base mt-3 font-normal">
             We combine rigorous academic coaching with personalized mentorship to help every student achieve their highest potential.
           </p>
-          <div className="w-16 h-1 bg-[#D85628] mx-auto mt-4 rounded-full"></div>
+          <div className="w-16 h-1 bg-[#5C2C1D] mx-auto mt-4 rounded-full"></div>
         </div>
 
         {/* Features Grid */}
@@ -58,7 +58,7 @@ export default function WhyUs() {
           {features.map((f, idx) => (
             <div
               key={idx}
-              className="bg-white border border-slate-200 hover:border-[#D85628] rounded-2xl p-8 transition duration-300 shadow-sm hover:shadow-md flex flex-col justify-between"
+              className="bg-white border border-slate-200 hover:border-[#5C2C1D] rounded-2xl p-8 transition duration-300 shadow-sm hover:shadow-md flex flex-col justify-between"
             >
               <div>
                 <div className="p-3 bg-slate-100 rounded-xl w-fit mb-6 shadow-sm">

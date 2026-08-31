@@ -8,13 +8,13 @@ export default {
     extend: {
       colors: {
         terracotta: {
-          DEFAULT: '#D85628',
-          hover: '#C2471B',
-          dark: '#742512',
-          light: '#FFDBCE',
-          bg: '#FFF5F0',
+          DEFAULT: '#5C2C1D',
+          hover: '#4A2216',
+          dark: '#381A12',
+          light: '#E8D8CF',
+          bg: '#FAF4F0',
         },
-        warmCream: '#FAF0E2',
+        warmCream: '#FAF4F0',
         navy: {
           950: '#070F1E',
           900: '#0B192C',
@@ -24,17 +24,17 @@ export default {
           500: '#3B82F6',
         },
         academy: {
-          terracotta: '#D85628',
-          terracottaDark: '#742512',
-          terracottaLight: '#FFDBCE',
-          terracottaBg: '#FFF5F0',
+          terracotta: '#5C2C1D',
+          terracottaDark: '#381A12',
+          terracottaLight: '#E8D8CF',
+          terracottaBg: '#FAF4F0',
           skyBlue: '#0284C7',
           skyBlueLight: '#E0F2FE',
           skyBlueBg: '#F0F9FF',
           gold: '#D97706',
           goldHover: '#B45309',
           amber: '#F59E0B',
-          lightBg: '#FAF0E2',
+          lightBg: '#FAF4F0',
           cardBg: '#FFFFFF',
           border: '#E2E8F0',
         }
@@ -45,9 +45,9 @@ export default {
       },
       boxShadow: {
         'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
-        'glow': '0 0 25px rgba(216, 86, 40, 0.15)',
-        'card': '0 4px 20px -2px rgba(116, 37, 18, 0.06)',
-        'card-hover': '0 12px 30px -4px rgba(116, 37, 18, 0.12)',
+        'glow': '0 0 25px rgba(92, 44, 29, 0.15)',
+        'card': '0 4px 20px -2px rgba(56, 26, 18, 0.06)',
+        'card-hover': '0 12px 30px -4px rgba(56, 26, 18, 0.12)',
       }
     },
   },

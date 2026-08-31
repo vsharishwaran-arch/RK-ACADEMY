@@ -32,7 +32,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-14 sm:py-20 bg-[#FAF0E2]/60 border-b border-slate-200">
+    <section id="faq" className="py-14 sm:py-20 bg-[#FAF4F0]/60 border-b border-slate-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -68,7 +68,7 @@ export default function FAQSection() {
                     {faq.q}
                   </span>
                   <div className={`p-1.5 rounded-full border transition flex-shrink-0 ${
-                    isOpen ? 'bg-[#D85628] text-white border-[#D85628] rotate-180' : 'bg-slate-100 text-slate-500 border-slate-200'
+                    isOpen ? 'bg-[#5C2C1D] text-white border-[#5C2C1D] rotate-180' : 'bg-slate-100 text-slate-500 border-slate-200'
                   }`}>
                     <ChevronDown className="w-5 h-5" />
                   </div>

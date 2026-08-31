@@ -60,12 +60,12 @@ export default function EnrollmentModal({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-sm animate-fadeIn">
       
-      <div className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto bg-gradient-to-br from-white via-[#FFF5F0] to-[#FFDBCE]/50 border-2 border-[#D85628]/30 rounded-3xl p-5 sm:p-8 shadow-2xl text-slate-900">
+      <div className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto bg-gradient-to-br from-white via-[#FAF4F0] to-[#E8D8CF]/50 border-2 border-[#5C2C1D]/30 rounded-3xl p-5 sm:p-8 shadow-2xl text-slate-900">
         
         {/* Close Button */}
         <button
           onClick={handleReset}
-          className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 text-slate-400 hover:text-[#742512] rounded-full hover:bg-white/80 transition min-h-[44px] min-w-[44px] flex items-center justify-center"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 text-slate-400 hover:text-[#381A12] rounded-full hover:bg-white/80 transition min-h-[44px] min-w-[44px] flex items-center justify-center"
           aria-label="Close modal"
         >
           <X className="w-6 h-6" />
@@ -73,12 +73,12 @@ export default function EnrollmentModal({ isOpen, onClose }) {
 
         {!submitted ? (
           <div>
-            <div className="inline-flex items-center gap-1.5 bg-[#FFDBCE] border border-[#D85628]/30 text-[#742512] font-extrabold text-xs uppercase tracking-wider px-3 py-1 rounded-full mb-3">
-              <Sparkles className="w-3.5 h-3.5 text-[#D85628]" />
+            <div className="inline-flex items-center gap-1.5 bg-[#E8D8CF] border border-[#5C2C1D]/30 text-[#381A12] font-extrabold text-xs uppercase tracking-wider px-3 py-1 rounded-full mb-3">
+              <Sparkles className="w-3.5 h-3.5 text-[#5C2C1D]" />
               <span>Direct Admission Inquiry</span>
             </div>
 
-            <h3 className="font-display font-black text-xl sm:text-3xl text-[#742512] pr-6">
+            <h3 className="font-display font-black text-xl sm:text-3xl text-[#381A12] pr-6">
               Enroll at RK Academy Karur
             </h3>
             <p className="text-xs text-slate-600 mt-1 mb-5 font-medium">
@@ -89,7 +89,7 @@ export default function EnrollmentModal({ isOpen, onClose }) {
               
               <div>
                 <label className="block text-xs font-bold text-slate-700 uppercase mb-1">
-                  Full Name <span className="text-[#D85628]">*</span>
+                  Full Name <span className="text-[#5C2C1D]">*</span>
                 </label>
                 <input
                   type="text"
@@ -97,13 +97,13 @@ export default function EnrollmentModal({ isOpen, onClose }) {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="e.g. Ramesh Kumar"
-                  className="w-full bg-white border border-[#D85628]/30 rounded-xl px-4 py-3 text-sm text-[#742512] font-medium focus:outline-none focus:border-[#D85628] shadow-sm min-h-[44px]"
+                  className="w-full bg-white border border-[#5C2C1D]/30 rounded-xl px-4 py-3 text-sm text-[#381A12] font-medium focus:outline-none focus:border-[#5C2C1D] shadow-sm min-h-[44px]"
                 />
               </div>
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 uppercase mb-1">
-                  Mobile / WhatsApp Number <span className="text-[#D85628]">*</span>
+                  Mobile / WhatsApp Number <span className="text-[#5C2C1D]">*</span>
                 </label>
                 <input
                   type="tel"
@@ -111,7 +111,7 @@ export default function EnrollmentModal({ isOpen, onClose }) {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder="e.g. 9790570707"
-                  className="w-full bg-white border border-[#D85628]/30 rounded-xl px-4 py-3 text-sm text-[#742512] font-medium focus:outline-none focus:border-[#D85628] shadow-sm min-h-[44px]"
+                  className="w-full bg-white border border-[#5C2C1D]/30 rounded-xl px-4 py-3 text-sm text-[#381A12] font-medium focus:outline-none focus:border-[#5C2C1D] shadow-sm min-h-[44px]"
                 />
               </div>
 
@@ -122,7 +122,7 @@ export default function EnrollmentModal({ isOpen, onClose }) {
                 <select
                   value={formData.course}
                   onChange={(e) => setFormData({ ...formData, course: e.target.value })}
-                  className="w-full bg-white border border-[#D85628]/30 rounded-xl px-4 py-3 text-sm text-[#742512] font-bold focus:outline-none focus:border-[#D85628] shadow-sm min-h-[44px]"
+                  className="w-full bg-white border border-[#5C2C1D]/30 rounded-xl px-4 py-3 text-sm text-[#381A12] font-bold focus:outline-none focus:border-[#5C2C1D] shadow-sm min-h-[44px]"
                 >
                   <option value="engg-maths">🔥 Engineering Maths M1-M4 (25% OFF)</option>
                   <option value="neet-crash">⚡ NEET Crash Course (March 26 - April 30)</option>
@@ -142,7 +142,7 @@ export default function EnrollmentModal({ isOpen, onClose }) {
                     onClick={() => setFormData({ ...formData, mode: 'Offline Karur Center' })}
                     className={`py-2.5 rounded-xl text-xs font-bold border transition min-h-[44px] flex items-center justify-center ${
                       formData.mode === 'Offline Karur Center'
-                        ? 'bg-[#D85628] border-[#D85628] text-white shadow-sm'
+                        ? 'bg-[#5C2C1D] border-[#5C2C1D] text-white shadow-sm'
                         : 'bg-white border-slate-200 text-slate-700'
                     }`}
                   >
@@ -153,7 +153,7 @@ export default function EnrollmentModal({ isOpen, onClose }) {
                     onClick={() => setFormData({ ...formData, mode: 'Online Live Classes' })}
                     className={`py-2.5 rounded-xl text-xs font-bold border transition min-h-[44px] flex items-center justify-center ${
                       formData.mode === 'Online Live Classes'
-                        ? 'bg-[#D85628] border-[#D85628] text-white shadow-sm'
+                        ? 'bg-[#5C2C1D] border-[#5C2C1D] text-white shadow-sm'
                         : 'bg-white border-slate-200 text-slate-700'
                     }`}
                   >
@@ -171,13 +171,13 @@ export default function EnrollmentModal({ isOpen, onClose }) {
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                   placeholder="e.g. Looking for evening 6 PM batch details..."
-                  className="w-full bg-white border border-[#D85628]/30 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-[#742512] font-medium focus:outline-none focus:border-[#D85628] shadow-sm"
+                  className="w-full bg-white border border-[#5C2C1D]/30 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-[#381A12] font-medium focus:outline-none focus:border-[#5C2C1D] shadow-sm"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full min-h-[48px] bg-gradient-to-r from-[#D85628] to-[#742512] hover:from-[#C2471B] hover:to-[#5E1E0E] text-white font-display font-black text-sm sm:text-base py-3.5 rounded-xl shadow-md transition duration-200 mt-2 flex items-center justify-center gap-2"
+                className="w-full min-h-[48px] bg-gradient-to-r from-[#5C2C1D] to-[#381A12] hover:from-[#4A2216] hover:to-[#2C140E] text-white font-display font-black text-sm sm:text-base py-3.5 rounded-xl shadow-md transition duration-200 mt-2 flex items-center justify-center gap-2"
               >
                 <Send className="w-5 h-5 text-amber-200" />
                 <span>Submit Inquiry</span>
