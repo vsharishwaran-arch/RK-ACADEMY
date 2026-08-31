@@ -7,7 +7,7 @@ export default function Hero({ onOpenEnroll }) {
     <section className="relative overflow-hidden bg-cover bg-center bg-no-repeat py-10 sm:py-16 lg:py-20 border-b border-slate-200" style={{ backgroundImage: "url('/hero_bg.png')" }}>
       
       {/* Background Soft Warm Chocolate Overlay */}
-      <div className="absolute inset-0 bg-[#FAF4F0]/90 backdrop-blur-[2px] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[#FAF4F0]/65 backdrop-blur-[1px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
