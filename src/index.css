@@ -3,43 +3,46 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
   body {
     overflow-x: hidden;
-    background-color: #FAF4F0;
-    color: #172021;
+    background-color: #F8FAFC;
+    color: #0F172A;
+    padding-bottom: 4.5rem; /* Space for mobile sticky bottom bar */
+  }
+
+  @media (min-width: 640px) {
+    body {
+      padding-bottom: 0rem;
+    }
   }
 }
 
 /* Custom Utility Animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-}
-
-@keyframes pulseGlow {
-  0%, 100% { opacity: 0.85; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.03); }
+  50% { transform: translateY(-6px); }
 }
 
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
 
-.animate-[#FAF4F0] {
-  animation: pulseGlow 3s ease-in-out infinite;
-}
-
 /* Scrollbar polish */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #E8D8CF;
+  background: #F1F5F9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #5C2C1D;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #381A12;
+  background: #0F2260;
 }
