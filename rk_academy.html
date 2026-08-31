@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RK Academy Karur – Your Dreams Come True</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #1a3a8f;
+      --blue-dark: #0f2260;
+      --maroon: #7b1a2e;
+      --gold: #e8c14a;
+      --white: #ffffff;
+      --light-bg: #f5f7fc;
+      --text-dark: #141414;
+      --text-mid: #3a3a3a;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: var(--blue-dark);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      height: 64px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .nav-logo img {
+      height: 42px; width: 42px; object-fit: contain; border-radius: 50%;
+      background: white; padding: 2px;
+    }
+    .nav-logo span {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700; font-size: 1.1rem;
+      color: var(--white);
+      letter-spacing: 0.5px;
+    }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 60%, #2952b3 100%);
+      display: flex; align-items: center;
+      padding: 100px 5% 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      right: -80px; top: -80px;
+      width: 520px; height: 520px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      left: 40%; bottom: -120px;
+      width: 380px; height: 380px;
+      border-radius: 50%;
+      background: rgba(232,193,74,0.07);
+    }
+    .hero-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%; max-width: 1100px; margin: 0 auto; gap: 40px;
+    }
+    .hero-text { flex: 1; }
+    .hero-tagline {
+      display: inline-block;
+      background: var(--maroon);
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 5px 14px;
+      border-radius: 2px;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+    .hero-text h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    .hero-text h1 span { color: var(--gold); }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.78);
+      margin: 18px 0 32px;
+      line-height: 1.6;
+      max-width: 480px;
+    }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--blue-dark);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 13px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: #f0cd5a; transform: translateY(-2px); }
+    .btn-outline {
+      border: 2px solid rgba(255,255,255,0.5);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 13px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+    .hero-logo-box {
+      flex-shrink: 0;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border: 3px solid rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-logo-box img {
+      width: 180px; height: 180px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3));
+    }
+
+    /* stats strip */
+    .stats-strip {
+      background: var(--maroon);
+      padding: 22px 5%;
+    }
+    .stats-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-around; flex-wrap: wrap; gap: 16px;
+    }
+    .stat { text-align: center; color: white; }
+    .stat-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem; font-weight: 900;
+      color: var(--gold);
+    }
+    .stat-label { font-size: 0.82rem; opacity: 0.85; margin-top: 2px; }
+
+    /* ── COURSES ── */
+    .section {
+      padding: 80px 5%;
+    }
+    .section-alt { background: var(--light-bg); }
+    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-header h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      font-weight: 800;
+      color: var(--blue-dark);
+      margin-bottom: 10px;
+    }
+    .section-header p { color: #555; font-size: 1rem; max-width: 560px; margin: 0 auto; }
+    .underline {
+      width: 56px; height: 4px;
+      background: var(--maroon);
+      margin: 14px auto 0;
+      border-radius: 2px;
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .course-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 32px 24px;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.07);
+      border-top: 4px solid var(--blue);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .course-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.12); }
+    .course-card:nth-child(2) { border-top-color: var(--maroon); }
+    .course-card:nth-child(3) { border-top-color: var(--gold); }
+    .course-card:nth-child(4) { border-top-color: #2eab6e; }
+    .course-icon { font-size: 2.2rem; margin-bottom: 14px; }
+    .course-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--blue-dark); margin-bottom: 10px;
+    }
+    .course-card p { font-size: 0.9rem; color: #555; line-height: 1.6; }
+    .course-badge {
+      display: inline-block;
+      margin-top: 14px;
+      background: var(--light-bg);
+      color: var(--blue-dark);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    /* ── WHY US ── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 28px;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .why-card {
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .why-icon {
+      font-size: 2.5rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .why-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem; font-weight: 700;
+      color: var(--blue-dark); margin-bottom: 8px;
+    }
+    .why-card p { font-size: 0.88rem; color: #555; line-height: 1.6; }
+
+    /* ── OFFER BANNER ── */
+    .offer-banner {
+      background: linear-gradient(135deg, var(--maroon), #a02040);
+      padding: 56px 5%;
+      text-align: center;
+      color: white;
+    }
+    .offer-banner h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .offer-banner h2 span { color: var(--gold); }
+    .offer-banner p { opacity: 0.85; margin-bottom: 28px; font-size: 1rem; }
+    .offer-tag {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--blue-dark);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      padding: 10px 28px;
+      border-radius: 4px;
+      margin-bottom: 24px;
+    }
+
+    /* ── TIMING ── */
+    .timing-box {
+      max-width: 700px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    }
+    .timing-card {
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+    }
+    .timing-card h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem; font-weight: 700;
+      color: var(--blue-dark); margin-bottom: 8px;
+    }
+    .timing-card p { font-size: 1rem; font-weight: 600; color: var(--maroon); }
+
+    /* ── CONTACT ── */
+    .contact-section {
+      background: var(--blue-dark);
+      padding: 80px 5%;
+      color: white;
+    }
+    .contact-inner {
+      max-width: 900px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 50px;
+      align-items: center;
+    }
+    .contact-info h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem; font-weight: 800;
+      margin-bottom: 24px;
+      color: var(--gold);
+    }
+    .contact-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      margin-bottom: 20px;
+    }
+    .contact-item-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .contact-item-text { font-size: 0.95rem; line-height: 1.5; opacity: 0.9; }
+    .contact-item-text strong { display: block; color: var(--gold); font-size: 0.8rem; letter-spacing: 0.5px; margin-bottom: 2px; }
+
+    .contact-cta {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 36px;
+      text-align: center;
+    }
+    .contact-cta h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem; font-weight: 700; margin-bottom: 12px;
+    }
+    .contact-cta p { opacity: 0.8; margin-bottom: 24px; font-size: 0.95rem; line-height: 1.6; }
+    .btn-call {
+      display: block;
+      background: var(--gold);
+      color: var(--blue-dark);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      padding: 15px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-bottom: 12px;
+      transition: background 0.2s;
+    }
+    .btn-call:hover { background: #f0cd5a; }
+    .btn-wa {
+      display: block;
+      background: #25d366;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 13px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-wa:hover { background: #1ebe5a; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #080f2a;
+      text-align: center;
+      padding: 24px 5%;
+      color: rgba(255,255,255,0.45);
+      font-size: 0.83rem;
+    }
+    footer span { color: var(--gold); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      .hero-inner { flex-direction: column; text-align: center; }
+      .hero-logo-box { width: 160px; height: 160px; }
+      .hero-logo-box img { width: 120px; height: 120px; }
+      .hero-sub { margin-left: auto; margin-right: auto; }
+      .hero-btns { justify-content: center; }
+      .contact-inner { grid-template-columns: 1fr; }
+      .timing-box { grid-template-columns: 1fr; }
+      nav .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <img src="https://i.imgur.com/placeholder.png" alt="RK Academy Logo" onerror="this.style.display='none'"/>
+    <span>RK Academy Karur</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#timing">Timing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-tagline">Karur's Trusted Coaching Center</div>
+      <h1>Your Dreams<br/><span>Come True</span></h1>
+      <p class="hero-sub">
+        Expert coaching for Grade 10 & 12 students — CBSE, ICSE, Matric, IIT Maths & Physics.
+        Both online and offline classes available.
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Enroll Now</a>
+        <a href="#courses" class="btn-outline">View Courses</a>
+      </div>
+    </div>
+    <div class="hero-logo-box">
+      <!-- Logo placeholder — replace src with actual logo image -->
+      <img src="rk_logo.png" alt="RK Academy Logo"/>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Students Taught</div></div>
+    <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Years Experience</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Dedicated Faculty</div></div>
+    <div class="stat"><div class="stat-num">2</div><div class="stat-label">Modes: Online & Offline</div></div>
+  </div>
+</div>
+
+<!-- COURSES -->
+<section class="section" id="courses">
+  <div class="section-header">
+    <h2>Our Courses</h2>
+    <p>Comprehensive coaching designed for real results</p>
+    <div class="underline"></div>
+  </div>
+  <div class="courses-grid">
+    <div class="course-card">
+      <div class="course-icon">📐</div>
+      <h3>Grade 10 — Maths & Science</h3>
+      <p>Foundation-level coaching for CBSE, ICSE & Matric board students. Strong conceptual clarity guaranteed.</p>
+      <span class="course-badge">CBSE · ICSE · MATRIC</span>
+    </div>
+    <div class="course-card">
+      <div class="course-icon">⚛️</div>
+      <h3>Grade 12 — Physics, Chemistry & Maths</h3>
+      <p>Advanced coaching for board exam excellence and competitive exam readiness including NEET crash course.</p>
+      <span class="course-badge">Board + NEET Prep</span>
+    </div>
+    <div class="course-card">
+      <div class="course-icon">🔢</div>
+      <h3>IIT Maths & Physics</h3>
+      <p>Specialized coaching for IIT JEE aspirants with in-depth problem solving and mock test series.</p>
+      <span class="course-badge">JEE · IIT Prep</span>
+    </div>
+    <div class="course-card">
+      <div class="course-icon">📊</div>
+      <h3>Engineering Maths (M1–M4)</h3>
+      <p>Complete Engineering Mathematics from semester 1 to 4. Perfect for BE/BTech students struggling with university exams.</p>
+      <span class="course-badge">25% OFF Now</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section section-alt" id="why">
+  <div class="section-header">
+    <h2>Why Choose RK Academy?</h2>
+    <p>We don't just teach — we transform students</p>
+    <div class="underline"></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="why-icon">🎯</span>
+      <h3>Focused Teaching</h3>
+      <p>Concept-first approach with rapid revision sessions to ensure every student truly understands, not just memorizes.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">💻</span>
+      <h3>Online & Offline</h3>
+      <p>Flexible learning modes — attend from our Karur center or join live from home. Your choice, your pace.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">📝</span>
+      <h3>Regular Tests</h3>
+      <p>Weekly assessments and mock tests to track progress and prepare students for real exam pressure.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">👨‍🏫</span>
+      <h3>Expert Faculty</h3>
+      <p>Experienced teachers with a strong track record of producing top scorers in board and competitive exams.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">🏆</span>
+      <h3>Proven Results</h3>
+      <p>Hundreds of students have cracked their board exams and competitive tests with RK Academy's guidance.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">💰</span>
+      <h3>Affordable Fees</h3>
+      <p>Quality coaching at prices that make sense. Special discounts available — Engineering Maths now at 25% off!</p>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER BANNER -->
+<div class="offer-banner">
+  <h2>Engineering Maths — <span>25% OFF</span></h2>
+  <p>Limited time offer on M1, M2, M3 & M4 — both online and offline batches</p>
+  <div class="offer-tag">🔥 Special Discount — Enroll Today!</div>
+  <br/>
+  <a href="tel:+919790570707" class="btn-primary" style="display:inline-block;">Call Now: +91 97905 70707</a>
+</div>
+
+<!-- TIMING -->
+<section class="section" id="timing">
+  <div class="section-header">
+    <h2>Class Timings</h2>
+    <p>Convenient schedules for school and college students</p>
+    <div class="underline"></div>
+  </div>
+  <div class="timing-box">
+    <div class="timing-card">
+      <h4>🕕 Evening Batch</h4>
+      <p>Monday – Saturday<br/>6:00 PM – 9:00 PM</p>
+    </div>
+    <div class="timing-card">
+      <h4>💻 Online Classes</h4>
+      <p>Available Anytime<br/>Live + Recorded Sessions</p>
+    </div>
+    <div class="timing-card">
+      <h4>📍 Location</h4>
+      <p>No.17, RP Muthu Plaza<br/>Near Thinnappa Theatre, Karur-1</p>
+    </div>
+    <div class="timing-card">
+      <h4>📱 Instagram</h4>
+      <p>@_rk_academy_<br/>Follow for updates</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <div class="contact-item">
+        <div class="contact-item-icon">📞</div>
+        <div class="contact-item-text">
+          <strong>Phone</strong>
+          +91 97905 70707
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">📍</div>
+        <div class="contact-item-text">
+          <strong>Address</strong>
+          No.17, RP Muthu Plaza, Near Thinnappa Theatre, Karur - 1
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">📸</div>
+        <div class="contact-item-text">
+          <strong>Instagram</strong>
+          @_rk_academy_
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">🕒</div>
+        <div class="contact-item-text">
+          <strong>Timing</strong>
+          Mon–Sat: 6:00 PM – 9:00 PM
+        </div>
+      </div>
+    </div>
+    <div class="contact-cta">
+      <h3>Ready to Start?</h3>
+      <p>Call us or WhatsApp to know more about admissions, fees and batch timings.</p>
+      <a href="tel:+919790570707" class="btn-call">📞 Call Now</a>
+      <a href="https://wa.me/919790570707" class="btn-wa">💬 WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 <span>RK Academy Karur</span> — Your Dreams Come True | No.17, RP Muthu Plaza, Near Thinnappa Theatre, Karur-1</p>
+</footer>
+
+</body>
+</html>
