@@ -1,19 +1,26 @@
 import React, { useState } from 'react';
-import { Phone, MessageCircle, Menu, X, Sparkles, MapPin } from 'lucide-react';
+import { Phone, MessageCircle, Menu, X, Sparkles, MapPin, Instagram } from 'lucide-react';
 import { ACADEMY_INFO } from '../data/academyData';
 
 export default function Navbar({ onOpenEnroll }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
+    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-amber-900/10 shadow-sm text-slate-800">
       
-      {/* Top Info Bar */}
-      <div className="bg-navy-800 text-slate-200 text-[11px] sm:text-xs py-1.5 px-3 sm:px-6 border-b border-navy-700">
+      {/* Top Info Bar (Rich Dark Brown) */}
+      <div className="bg-[#3E1A14] text-amber-100 text-[11px] sm:text-xs py-1.5 px-3 sm:px-6 border-b border-[#2D120D]">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
-          <div className="flex items-center gap-1.5 truncate">
-            <MapPin className="w-3 h-3 text-amber-300 flex-shrink-0" />
-            <span className="truncate">RP Muthu Plaza, Near Thinnappa Theatre, Karur</span>
+          
+          <div className="flex items-center gap-2 truncate">
+            <a href={`tel:${ACADEMY_INFO.phone}`} className="flex items-center gap-1 font-bold text-amber-300 hover:underline">
+              <Phone className="w-3 h-3" />
+              <span>Call: {ACADEMY_INFO.phone}</span>
+            </a>
+          </div>
+
+          <div className="hidden sm:flex items-center gap-2 bg-amber-400/20 text-amber-300 font-extrabold px-2.5 py-0.5 rounded-full border border-amber-400/30 text-[10px]">
+            <span>⚡ Engineering Maths 25% OFF</span>
           </div>
 
           <div className="flex items-center gap-3 flex-shrink-0">
@@ -21,19 +28,22 @@ export default function Navbar({ onOpenEnroll }) {
               href={`https://wa.me/${ACADEMY_INFO.whatsappNumber}`} 
               target="_blank" 
               rel="noreferrer"
-              className="hidden sm:flex items-center gap-1 hover:text-emerald-400 transition"
+              className="flex items-center gap-1 hover:text-emerald-400 transition"
             >
               <MessageCircle className="w-3 h-3 text-emerald-400" />
               <span>WhatsApp</span>
             </a>
             <a 
-              href={`tel:${ACADEMY_INFO.phone}`} 
-              className="flex items-center gap-1 text-amber-300 font-bold hover:underline"
+              href={ACADEMY_INFO.instagramUrl} 
+              target="_blank" 
+              rel="noreferrer"
+              className="text-amber-200 hover:text-white"
+              title="Instagram"
             >
-              <Phone className="w-3 h-3" />
-              <span>{ACADEMY_INFO.phone}</span>
+              <Instagram className="w-3.5 h-3.5" />
             </a>
           </div>
+
         </div>
       </div>
 
@@ -46,17 +56,17 @@ export default function Navbar({ onOpenEnroll }) {
             <img 
               src="/22.jpg" 
               alt="RK Academy Logo" 
-              className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-navy-800 object-contain bg-white p-0.5 flex-shrink-0 shadow-sm"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#3E1A14] object-contain bg-white p-0.5 flex-shrink-0 shadow-sm"
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = "22.jpg";
               }}
             />
             <div className="flex flex-col min-w-0">
-              <span className="font-display font-black text-base sm:text-xl tracking-tight text-navy-900 leading-tight truncate">
+              <span className="font-display font-black text-base sm:text-xl tracking-tight text-[#3E1A14] leading-tight truncate">
                 RK ACADEMY
               </span>
-              <span className="text-[9px] sm:text-[11px] text-academy-maroon font-bold tracking-wider uppercase truncate">
+              <span className="text-[9px] sm:text-[11px] text-[#6B1B29] font-extrabold tracking-wider uppercase truncate">
                 KARUR • TUITION CENTER
               </span>
             </div>
@@ -64,16 +74,16 @@ export default function Navbar({ onOpenEnroll }) {
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-bold">
-            <a href="#" className="text-slate-700 hover:text-navy-900 transition">
+            <a href="#" className="text-slate-800 hover:text-[#3E1A14] transition">
               Home
             </a>
-            <a href="#courses-fees" className="text-slate-700 hover:text-navy-900 transition">
+            <a href="#courses-fees" className="text-slate-800 hover:text-[#3E1A14] transition">
               Courses & Fees
             </a>
-            <a href="#toppers" className="text-slate-700 hover:text-navy-900 transition">
+            <a href="#toppers" className="text-slate-800 hover:text-[#3E1A14] transition">
               Results & Toppers
             </a>
-            <a href="#contact" className="text-slate-700 hover:text-navy-900 transition">
+            <a href="#contact" className="text-slate-800 hover:text-[#3E1A14] transition">
               Contact & Location
             </a>
           </nav>
@@ -82,9 +92,9 @@ export default function Navbar({ onOpenEnroll }) {
           <div className="hidden md:flex items-center gap-3">
             <button
               onClick={onOpenEnroll}
-              className="bg-navy-800 hover:bg-navy-700 text-white font-display font-extrabold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl shadow-md active:scale-95 transition flex items-center gap-2"
+              className="bg-[#3E1A14] hover:bg-[#2D120D] text-amber-200 font-display font-extrabold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl shadow-md active:scale-95 transition flex items-center gap-2"
             >
-              <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
               <span>Enroll Now</span>
             </button>
           </div>
@@ -93,14 +103,14 @@ export default function Navbar({ onOpenEnroll }) {
           <div className="flex md:hidden items-center gap-2 flex-shrink-0">
             <button
               onClick={onOpenEnroll}
-              className="bg-navy-800 text-white text-[11px] font-extrabold px-3 py-1.5 rounded-lg shadow-sm flex items-center gap-1 active:scale-95"
+              className="bg-[#3E1A14] text-amber-200 text-[11px] font-extrabold px-3 py-1.5 rounded-lg shadow-sm flex items-center gap-1 active:scale-95"
             >
-              <Sparkles className="w-3 h-3 text-amber-300" />
+              <Sparkles className="w-3 h-3 text-amber-400" />
               <span>Enroll</span>
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-1.5 text-slate-700 hover:text-navy-900 focus:outline-none rounded-lg border border-slate-200"
+              className="p-1.5 text-slate-800 hover:text-[#3E1A14] focus:outline-none rounded-lg border border-slate-200"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -112,32 +122,32 @@ export default function Navbar({ onOpenEnroll }) {
 
       {/* Mobile Dropdown Drawer */}
       {isOpen && (
-        <div className="md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-5 space-y-2 text-slate-800 shadow-xl animate-fadeIn">
+        <div className="md:hidden bg-white border-b border-amber-900/10 px-4 pt-2 pb-5 space-y-2 text-slate-800 shadow-xl animate-fadeIn">
           <a 
             href="#" 
             onClick={() => setIsOpen(false)}
-            className="block text-slate-700 hover:text-navy-900 font-bold text-sm py-2 border-b border-slate-100"
+            className="block text-slate-800 hover:text-[#3E1A14] font-bold text-sm py-2 border-b border-slate-100"
           >
             Home
           </a>
           <a 
             href="#courses-fees" 
             onClick={() => setIsOpen(false)}
-            className="block text-slate-700 hover:text-navy-900 font-bold text-sm py-2 border-b border-slate-100"
+            className="block text-slate-800 hover:text-[#3E1A14] font-bold text-sm py-2 border-b border-slate-100"
           >
             Courses & Fees
           </a>
           <a 
             href="#toppers" 
             onClick={() => setIsOpen(false)}
-            className="block text-slate-700 hover:text-navy-900 font-bold text-sm py-2 border-b border-slate-100"
+            className="block text-slate-800 hover:text-[#3E1A14] font-bold text-sm py-2 border-b border-slate-100"
           >
             Results & Toppers
           </a>
           <a 
             href="#contact" 
             onClick={() => setIsOpen(false)}
-            className="block text-slate-700 hover:text-navy-900 font-bold text-sm py-2"
+            className="block text-slate-800 hover:text-[#3E1A14] font-bold text-sm py-2"
           >
             Contact & Location
           </a>
@@ -146,9 +156,9 @@ export default function Navbar({ onOpenEnroll }) {
               setIsOpen(false);
               onOpenEnroll();
             }}
-            className="w-full bg-navy-800 text-white font-extrabold text-xs py-3 rounded-xl text-center shadow-md mt-2 flex items-center justify-center gap-2"
+            className="w-full bg-[#3E1A14] text-amber-200 font-extrabold text-xs py-3 rounded-xl text-center shadow-md mt-2 flex items-center justify-center gap-2"
           >
-            <Sparkles className="w-4 h-4 text-amber-300" />
+            <Sparkles className="w-4 h-4 text-amber-400" />
             <span>Join Now / Admission Inquiry</span>
           </button>
         </div>

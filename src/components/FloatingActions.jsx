@@ -26,11 +26,11 @@ export default function FloatingActions({ onOpenEnroll }) {
         {/* Floating Call Button */}
         <a
           href={`tel:${ACADEMY_INFO.phone}`}
-          className="bg-navy-800 hover:bg-navy-700 text-white p-3.5 rounded-full shadow-2xl transition duration-300 hover:scale-110 flex items-center justify-center group border border-navy-700"
+          className="bg-[#3E1A14] hover:bg-[#2D120D] text-white p-3.5 rounded-full shadow-2xl transition duration-300 hover:scale-110 flex items-center justify-center group border border-[#2D120D]"
           title="Call RK Academy Admin"
         >
           <Phone className="w-5 h-5 text-amber-300" />
-          <span className="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out text-xs font-bold text-white pl-0 group-hover:pl-2">
+          <span className="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out text-xs font-bold text-amber-200 pl-0 group-hover:pl-2">
             {ACADEMY_INFO.phone}
           </span>
         </a>
@@ -38,20 +38,20 @@ export default function FloatingActions({ onOpenEnroll }) {
       </div>
 
       {/* Mobile Fixed Bottom Sticky Bar */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2 flex items-center gap-2 shadow-2xl">
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-amber-900/15 px-3 py-2 flex items-center gap-2 shadow-2xl">
         <a
           href={`tel:${ACADEMY_INFO.phone}`}
-          className="flex-1 bg-slate-100 active:bg-slate-200 text-navy-900 border border-slate-300 font-bold text-xs py-2.5 rounded-xl flex items-center justify-center gap-1 min-w-0 truncate"
+          className="flex-1 bg-amber-50 active:bg-amber-100 text-[#3E1A14] border border-amber-200 font-bold text-xs py-2.5 rounded-xl flex items-center justify-center gap-1 min-w-0 truncate"
         >
-          <Phone className="w-3.5 h-3.5 text-navy-800 flex-shrink-0" />
+          <Phone className="w-3.5 h-3.5 text-[#3E1A14] flex-shrink-0" />
           <span className="truncate">Call Admin</span>
         </a>
 
         <button
           onClick={onOpenEnroll}
-          className="flex-1 bg-navy-800 active:bg-navy-700 text-white font-extrabold text-xs py-2.5 rounded-xl shadow-md flex items-center justify-center gap-1 min-w-0 truncate"
+          className="flex-1 bg-[#3E1A14] active:bg-[#2D120D] text-amber-200 font-extrabold text-xs py-2.5 rounded-xl shadow-md flex items-center justify-center gap-1 min-w-0 truncate"
         >
-          <Sparkles className="w-3.5 h-3.5 text-amber-300 flex-shrink-0" />
+          <Sparkles className="w-3.5 h-3.5 text-amber-400 flex-shrink-0" />
           <span className="truncate">Enroll Now</span>
         </button>
 

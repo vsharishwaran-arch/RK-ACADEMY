@@ -10,8 +10,8 @@
   
   body {
     overflow-x: hidden;
-    background-color: #F8FAFC;
-    color: #0F172A;
+    background-color: #FAF6F0;
+    color: #1E293B;
     padding-bottom: 4.5rem; /* Space for mobile sticky bottom bar */
   }
 
@@ -22,14 +22,12 @@
   }
 }
 
-/* Custom Utility Animations */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
-}
-
-.animate-float {
-  animation: float 4s ease-in-out infinite;
+/* Warm Educational Math Pattern Background */
+.bg-math-pattern {
+  background-color: #FAF6F0;
+  background-image: radial-gradient(#E2DAD0 0.75px, transparent 0.75px), radial-gradient(#E2DAD0 0.75px, #FAF6F0 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
 }
 
 /* Scrollbar polish */
@@ -37,12 +35,9 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #F2EBE1;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #3E1A14;
   border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #0F2260;
 }
