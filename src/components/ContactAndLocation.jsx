@@ -86,7 +86,7 @@ export default function ContactAndLocation({ onOpenEnroll }) {
                   href={`https://wa.me/${ACADEMY_INFO.whatsappNumber}?text=Hi%20RK%20Academy,%20I%20want%20to%20inquire%20about%20admissions.`}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex-1 bg-slate-900 hover:bg-black text-white font-bold text-sm py-3.5 rounded-xl shadow-md flex items-center justify-center gap-2 transition"
+                  className="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm py-3.5 rounded-xl shadow-md flex items-center justify-center gap-2 transition"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>WhatsApp Chat</span>

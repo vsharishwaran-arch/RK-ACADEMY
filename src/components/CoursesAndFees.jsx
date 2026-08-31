@@ -232,7 +232,7 @@ export default function CoursesAndFees({ onOpenEnroll }) {
                 href={`https://wa.me/${ACADEMY_INFO.whatsappNumber}?text=Hi%20RK%20Academy,%20I%20want%20to%20enroll%20for%20${selectedEnggPapers}%20Engineering%20Maths%20paper(s)%20with%2025%25%20Discount.%20Total:%20₹${enggFinal}.`}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full min-h-[48px] bg-[#5C2C1D] hover:bg-[#4A2216] text-white font-bold text-xs sm:text-sm py-3 rounded-xl shadow-md flex items-center justify-center gap-2 transition"
+                className="w-full min-h-[48px] bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm py-3 rounded-xl shadow-md flex items-center justify-center gap-2 transition"
               >
                 <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>Claim Offer on WhatsApp</span>

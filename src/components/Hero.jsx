@@ -62,7 +62,7 @@ export default function Hero({ onOpenEnroll }) {
                 href={`https://wa.me/${ACADEMY_INFO.whatsappNumber}?text=Hi%20RK%20Academy,%20I%20want%20to%20inquire%20about%20admissions.`}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full sm:w-auto min-h-[48px] bg-slate-900 hover:bg-black text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl shadow-md transition flex items-center justify-center gap-2"
+                className="w-full sm:w-auto min-h-[48px] bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl shadow-md transition flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-5 h-5" />
                 <span>WhatsApp Instant Chat</span>
